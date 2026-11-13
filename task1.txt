@@ -1,0 +1,15 @@
+Aufgabe: Der launische Kaffeeautomat
+Ausgangslage: Der Kaffeeautomat im Büro hat Launen. Schreiben Sie die Funktion buyCoffee({ drink, coins, weekday, random }) und sichern Sie sie mit Tests ab.
+Die Regeln des Automaten:
+Preise: espresso 1,50 €, cappuccino 2,00 €, latte 2,50 €
+Montagsrabatt: Montags gibt es 20 % Rabatt, weil alle müde sind (weekday ist dann 'monday').
+Zu wenig Geld: Fehler mit der Meldung Zu wenig Geld.
+Unbekanntes Getränk, zum Beispiel 'pizza': Fehler mit der Meldung Das gibt es hier nicht.
+Münzfresser: Ist random() kleiner als 0.1, verschluckt der Automat die Münzen und liefert { drink: null, change: 0, message: 'Der Automat hat Ihre Münze verschluckt' }.
+Sonst bekommt man { drink, change, message: 'Bitte sehr!' }, wobei change das Rückgeld ist.
+Ihre Aufgabe:
+Schreiben Sie mindestens 8 Tests.
+Testen Sie die Grenze beim Münzfresser (0.09 und 0.1) und den Fall, dass genau passend bezahlt wird.
+Testen Sie den Montagsrabatt. Achtung, hier lauert eine Falle bei Kommazahlen. Wenn ein Test unerwartet rot wird, schauen Sie genau auf die Zahlen.
+Überlegen Sie: Warum bekommt die Funktion random als Parameter, statt selbst Math.random() aufzurufen? Welche Eigenschaft guter Tests (FIRST) wäre sonst verletzt?
+Bonus: Ergänzen Sie den Tee. Er ist kostenlos, aber der Automat gibt ihn nur aus, wenn random() größer als 0.5 ist, sonst lautet die Meldung Heute nicht.
